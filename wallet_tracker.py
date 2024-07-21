@@ -22,7 +22,7 @@ def main():
     create_directory_if_not_exists("data/wallets/")
 
     WALLETS = [x.split(",") for x in read_input("wallets.txt")]
-
+    print (WALLETS)
     MORALIS_API_KEY = os.getenv("MORALIS_API_KEY")
     SHYFT_API_KEY = os.getenv("SHYFT_API_KEY")
 

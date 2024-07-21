@@ -362,7 +362,7 @@ def get_buys_sells(wallet: list[str], log: bool = False) -> dict:
 
         temp["action"] = temp["change"].apply(buy_sell_same)
 
-        result = temp[["address"]]
+        result = temp[["address"]].copy()
 
         result.loc[:, "name"] = np.where(
             temp["name_x"] != 0, temp["name_x"], temp["name_y"]
